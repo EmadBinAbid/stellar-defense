@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>322</x>
+      <y>532</y>
+      <w>224</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Screens
+-
+
+--
++Screens()
++~Screens()
+/+Render():void/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>308</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Splash
+--
+
+--
++Splash(LTexture*, float, float)
++~Splash()
++Render():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>308</x>
+      <y>714</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>MainMenu
+--
+
+--
++MainMenu(LTexture*, float, float)
++~MainMenu()
++Render():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>308</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>GameScreen
+--
+
+--
++GameScreen(LTexture*, float, float)
++~GameScreen()
++Render():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>518</y>
+      <w>364</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>InventoryScreen
+--
+
+--
++InventoryScreen(LTexture*, float, float)
++~InventoryScreen()
++Render():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>546</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>QuitOrContinue
+--
+
+--
++QuitOrContinue(LTexture*, float, float)
++~QuitOrContinue()
++Render():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>588</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>588</y>
+      <w>70</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>448</y>
+      <w>42</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>434</x>
+      <y>658</y>
+      <w>42</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>532</y>
+      <w>182</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Point
+--
++x,y:int
+--
++Point()
++Point(int, int)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>252</y>
+      <w>406</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>LTexture
+--
+-texture:SDL_Texture
+-width:int
+-height:int
+--
++LTexxture()
++~LTexture()
++LoadFromFile(string, SDL_Renderer*):bool
++Free():void
++SetColor(Unit8,Unit8,Unit8):void
++SetBlendMode(SDL_BlendMode):void
++SetAlpha(Unit8):void
++Render(int, int, SDL_Rect*, double, SDL_Point*, SDL_RendererFlip , SDL_Renderer* ):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>322</x>
+      <y>490</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1722</x>
+      <y>406</y>
+      <w>602</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>Button
+--
+#clicked : bool                                                                        
+# width int                                                    
+# height : int 
+--
++ Button()              
++ Button(LTexture*, float, float) 
++ Button(const Button&amp;)                                               
++ ~Button()                                     
++ RenderButton(SDL_Renderer*) : void                      
++ ChangeColor(SDL_Renderer*, Uint8, Uint8, Uint8) : void
++ isClicked() : bool
++ Click():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1176</x>
+      <y>574</y>
+      <w>574</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>390.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1736</x>
+      <y>756</y>
+      <w>168</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Play
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1792</x>
+      <y>686</y>
+      <w>42</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>756</y>
+      <w>336</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>GameObject
+--
+# spriteClips:SDL_Rect
+# width int                                                    
+# height : int 
+--
++ GameObject(Ltexture*,float,float)
++ ~GameObject()
++ Update() : void
++ Render(SDL_Renderer*) : void
+/+ GetDestroyed(): void/
+/+ Move() : void/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>448</y>
+      <w>42</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>644</y>
+      <w>42</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>658</x>
+      <y>756</y>
+      <w>308</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>SpaceShip
+--
+# alive : bool
+# speedx,speedy : float
+- bulletCount: int
+- resourceCount : int
+--
++ SpaceShip(Ltexture*,float,float) 
++ ~SpaceShip()
++ Move(int) : void
++ Move(): void
++ Attack() : void
++ PlantResource() : void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>952</x>
+      <y>840</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>896</y>
+      <w>280</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Enemy
+--
+- attackValue : int
+--
++ Enemy(Ltexture*,float,float)
++ ~Enemy()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>910</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>896</x>
+      <y>1078</y>
+      <w>266</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Health
+--
+- health : int
+--
++ Health(Ltexture*,float,float)
++ ~Health()
++ getHealth() : int
++ setHealth(int) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>1022</y>
+      <w>42</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>1120</y>
+      <w>294</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Balance
+--
+- balance : int
+--
++ Balance(Ltexture*,float,float)
++ ~Balance()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>1022</y>
+      <w>42</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1036</x>
+      <y>966</y>
+      <w>42</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>966</y>
+      <w>518</w>
+      <h>322</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>350.0;10.0;350.0;210.0;10.0;210.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1316</x>
+      <y>1050</y>
+      <w>294</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>Planet
+--
+-Worth:int
+--
++ Planet(Ltexture*,float,float,int)
++ ~Planet()
++ GetSick(): void
++ GetHealthy() : void
++  GetWorth():int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1316</x>
+      <y>966</y>
+      <w>42</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1750</x>
+      <y>938</y>
+      <w>294</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>BlackHole
+--
+
+--
++ BlackHole(Ltexture*,float,float)
++ ~BlackHole()
++ AbsorbShaceShip() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>840</y>
+      <w>448</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;90.0;300.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1638</x>
+      <y>1134</y>
+      <w>294</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Star
+--
+
+--
++ Star(Ltexture*,float,float)
++ ~Star()
++ BurnSpaceShip() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>924</y>
+      <w>378</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;70.0;250.0;70.0;250.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1372</x>
+      <y>1316</y>
+      <w>294</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>Asteriod
+--
+- damage: int
+- bonus: int
+--
++ Asteriod(Ltexture*,float,float)
++ ~Asteriod()
++ CollideExplode() : void
++ GetBonus():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1274</x>
+      <y>980</y>
+      <w>140</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0;80.0;210.0;80.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>1316</y>
+      <w>294</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>Ammunition
+--
+# cost : int
+# harmValue : int
+--
++ Ammunition(Ltexture*,float,float)
++ ~Ammunition()
++ Move() : void
++ GetCost():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>1330</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Resource
+--
+# cost : int
+# healthValue:int
+--
++ Resource(Ltexture*,float,float)
++ ~Resource()
++ GetCost() : int
++ GetHealthValue():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>1386</y>
+      <w>182</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>182</x>
+      <y>1330</y>
+      <w>294</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Chemical
+--
+
+--
++ Chemical(Ltexture*,float,float)
++ ~Chemicsl()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>1526</y>
+      <w>294</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Water
+--
+
+--
++ Water(Ltexture*,float,float)
++ ~Water()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>1442</y>
+      <w>266</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>1526</y>
+      <w>294</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Plant
+--
+
+--
++ Plant(Ltexture*,float,float)
++ ~Plant()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>658</x>
+      <y>1470</y>
+      <w>42</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>1526</y>
+      <w>294</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Bullet
+--
+
+--
++ Bullet(Ltexture*,float,float)
++ ~Bullet()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>1484</y>
+      <w>42</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1134</x>
+      <y>1484</y>
+      <w>42</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1106</x>
+      <y>1526</y>
+      <w>294</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Beam
+--
+
+--
++ Beam(Ltexture*,float,float)
++ ~Beam()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1218</x>
+      <y>966</y>
+      <w>70</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;180.0;10.0;180.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>966</y>
+      <w>532</w>
+      <h>392</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>360.0;10.0;360.0;240.0;10.0;240.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>14</x>
+      <y>1050</y>
+      <w>336</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>Inventory
+--
+
+--
++ Inventory(Ltexture*,float,float)
++ ~Inventory
++ SelectResource(Resource*)
++ SelectAmmunition(Ammunition*)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>1218</y>
+      <w>420</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>280.0;80.0;280.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>1218</y>
+      <w>770</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>530.0;70.0;530.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>966</y>
+      <w>826</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>570.0;10.0;570.0;60.0;360.0;60.0;360.0;90.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>1022</y>
+      <w>294</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>150.0;220.0;150.0;190.0;10.0;190.0;10.0;40.0;190.0;40.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>1022</y>
+      <w>588</w>
+      <h>322</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;210.0;400.0;190.0;10.0;190.0;10.0;40.0;190.0;40.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>966</x>
+      <y>0</y>
+      <w>294</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Node
+--
++next: Node*
++prev: Node*
+--
++Node()
++~Node()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1246</x>
+      <y>546</y>
+      <w>238</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;70.0;150.0;70.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>238</y>
+      <w>294</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>List
+--
+
+--
++List()
++List(const List&amp;)
++~List()
++Append(GameObject*):void
++AppendAt(GameObject*, int):void
++Remove():GameObject*
++RemoveAt(int): GameObject*
++Length():int
++Clean():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>154</y>
+      <w>42</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>714</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1190</x>
+      <y>154</y>
+      <w>42</w>
+      <h>630</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;430.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>0</y>
+      <w>294</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>LoadGame
+--
+-new : bool
+--
++LoadGame(new)
++~LoadGame()
++ Render(SDL_Renderer):void
++ Move():void
++ Quit():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>168</y>
+      <w>42</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+fg=black
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>56</y>
+      <w>294</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>SaveGame
+--
+
+--
++Save():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>154</y>
+      <w>406</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+fg=black
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;210.0;60.0;270.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1722</x>
+      <y>280</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Quit
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1932</x>
+      <y>756</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Save
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2086</x>
+      <y>756</y>
+      <w>168</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>InventoryButton
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1498</x>
+      <y>630</y>
+      <w>182</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Resume
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1974</x>
+      <y>686</y>
+      <w>42</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2142</x>
+      <y>686</y>
+      <w>42</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1666</x>
+      <y>644</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1778</x>
+      <y>350</y>
+      <w>42</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>182</y>
+      <w>1400</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+fg=black
+bg=black</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0;890.0;10.0;980.0;160.0</additional_attributes>
+  </element>
+</diagram>
